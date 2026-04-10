@@ -1,67 +1,73 @@
 :root{
-    --violet-doux:#6C63FF;
-    --violet-fonce:#534EDD;
-    --orange-vif:#FFA726;
-    --gris-tres-fonce:#333;
-    --gis-fonce:#666;
-    --gris-tres-clair:#F8F8F8;
-    --gris-clair:#EEE;
-}
+    --violet-doux: #6c63ff;
+    --violet-foncé: #534EDD;
+    --orange-vif: #ffa726;
+    --gris-trés-foncé: #333;
+    --gris-foncé: #666;
+    --gris-tres-clair: #f8f8f8;
+    --gris-clair: #eee;
 
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    background-color: var(--gris-clair);
-    font-family:Roboto,sans-serif;
-    line-height: 1,6;
-}
-header {
+    background-color: var(--gris-tres-clair);
+    font-family: Roboto, sans-serif;
+    line-height: 1.6;
+} 
+
+header{
     background-color: white;
-    box-shadow: 2px 6px 10px rgba(0,0,0,0.05);
-    position: stickY;
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
     top: 0;
     z-index: 100;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-    padding:  2rem 3rem;
+    padding: 2rem 3rem;
 }
-header div a{
+
+header div a {
     text-decoration: none;
     font-size: 2.2rem;
     font-weight: bold;
     color: var(--violet-doux);
 }
+
 ul li {
     list-style: none;
     margin-left: 25px;
 }
-ul {
+ul{
     display: flex;
 }
+
 ul li a {
     text-decoration: none;
-    color: var(--gris-tres-fonce);
+    color: var(--gris-trés-foncé);
     font-weight: 600;
     font-size: 1.1rem;
     position: relative;
     padding: 10px 0;
 }
 
+
 ul li a:hover{
     color: var(--violet-doux);
-
 }
 
 ul li a::after {
     content: '';
-    position: absolute;
+    position:absolute;
     left: 0;
     bottom: 0;
     height: 3px;
+    width: 0%;
     background-color: var(--violet-doux);
     transition: width 0.3s ease;
 }
@@ -74,9 +80,10 @@ a.active {
     color: var(--violet-doux);
 }
 
-a.active::after {
+a.active::after{
     width: 100%;
 }
+
 .hero {
     display: flex;
     justify-content: center;
@@ -84,7 +91,7 @@ a.active::after {
     gap: 5rem;
     text-align: center;
     margin: 10rem 2rem;
-}
+} 
 
 .hero img {
     width: 300px;
@@ -102,7 +109,7 @@ a.active::after {
 }
 
 .hero p {
-    color: var(--gris-tres-fonce)
+    color: var(--gris-foncé);
     font-size: 1.3rem;
     margin-bottom: 1.2rem;
 }
@@ -110,11 +117,10 @@ a.active::after {
 .hero a {
     text-decoration: none;
     display: inline-block;
-
     background-color: var(--violet-doux);
     color: white;
     padding: 15px 30px;
-    border-radius: 50px;
+    border-radius: 25px;
     text-transform: uppercase;
     letter-spacing: 1.1px;
     font-weight: 600;
@@ -123,17 +129,17 @@ a.active::after {
 }
 
 .hero a:hover {
-    background-color: var(--violet-fonce);
-    transform: translate(-3px);
+    background-color: var(--violet-foncé);
+    transform: translatey(-3px);
 }
 
-.apropos {
+.aPropos {
     width: 800px;
     margin: 6rem auto;
     text-align: center;
 }
 
-section h2 {
+section h2{
     color: var(--violet-doux);
     font-size: 2.6rem;
     font-weight: 700;
@@ -151,9 +157,673 @@ section h2::after {
     border-radius: 2px;
 }
 
-.apropos p {
+.aPropos p {
     margin-bottom: 2rem;
-    color:var(--gris-tres-fonce)
+    color: var(--gris-foncé);
     font-size: 1.3rem;
+}
+
+.compétences table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #FFF;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.compétences table th, .compétences table td {
+    padding: 15px;
+}
+
+.compétences table thead {
+    background-color: var(--violet-doux);
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.compétences table tbody td {
+    border-bottom: 1px solid var(--gris-clair);
+}
+
+.compétences table tbody tr:nth-child(even) {
+    background-color: #FDFDFD;
+}
+
+.compétences table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.compétences table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.compétences table thead th {
+    text-align: left;
+}
+
+footer {
+    margin-top: 3rem;
+    background-color: var(--violet-doux);
+    padding: 3rem;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin-bottom: 1.2rem;
+}
+
+footer a {
+    display:inline-block;
+    font-size: 1.6rem;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--orange-vif);
+    transform: translateY(-3px);
+}
+/* Styles pour la grille de passions */
+.passions-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur mobile */
+    gap: 2.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 6rem auto;
+}
+
+.passion-card {
+    background-color: white;
+    width: 320px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Pour que l'image ne dépasse pas des bords arrondis */
+    padding-bottom: 2rem;
+}
+
+.passion-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.2); /* Ombre violette au survol */
+}
+
+.image-container {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 1.5rem;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image remplit le cadre sans être écrasée */
+}
+
+.passion-card h3 {
+    color: var(--violet-doux);
+    margin: 0.5rem 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.passion-card p {
+    color: var(--gris-foncé);
+    font-size: 1.05rem;
+    padding: 0 1.5rem;
+    line-height: 1.4;
+}
+/* --- Styles pour la page Divertissement --- */
+
+.divertissement-header {
+    text-align: center;
+    margin: 4rem 2rem;
+}
+
+.divertissement-header h1 {
+    color: var(--violet-doux);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.divertissement-header p {
+    color: var(--gris-foncé);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 2rem 5%;
+    margin-bottom: 5rem;
+}
+
+.div-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden; /* Pour que l'image respecte les bords arrondis */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.div-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.2); /* Ombre violette légère au survol */
+}
+
+.div-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--violet-doux);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: var(--violet-doux);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: var(--gris-foncé);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Ajustement pour les images du footer (cas où tu n'utilises pas FontAwesome) */
+footer div img {
+    margin: 0 10px;
+    filter: brightness(0) invert(1); /* Rend les logos blancs pour aller sur le fond violet */
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+}
+
+footer div img:hover {
+    transform: scale(1.2);
+}
+/* Styles pour la page Contact */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    gap: 4rem;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact-info h2::after {
+    margin: 1rem 0; /* Aligne la ligne décorative à gauche */
+}
+
+.info-item {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    color: var(--gris-tres-fonce);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-apps {
+    display: flex;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.social-apps a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.whatsapp { background-color: #25D366; }
+.telegram { background-color: #0088cc; }
+
+.social-apps a:hover {
+    opacity: 0.8;
+}
+
+/* Style du Formulaire */
+.contact-form {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease both;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--violet-doux);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--violet-doux);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--violet-fonce);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        margin: 3rem auto;
+    }
+    .social-apps {
+        flex-direction: column;
+    }
+}
+
+.projects {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.projects h2 {
+    margin-bottom: 3rem;
+}
+
+/* GRID 3 PAR 3 */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    gap: 25px;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease both;
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* TITRE */
+.card h3 {
+    margin: 15px 10px 5px;
+    color: var(--gris-trés-foncé);
+}
+
+/* TEXTE */
+.card p {
+    margin: 0 10px;
+    color: var(--gris-foncé);
+    font-size: 0.95rem;
+}
+
+/* TAGS */
+.tags {
+    padding: 10px;
+}
+
+.tags span {
+    background-color: var(--gris-clair);
+    padding: 5px 10px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: inline-block;
+}
+
+/* ACTIONS */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* BOUTONS */
+.actions button {
+    border: none;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.actions button:hover {
+    background-color: var(--violet-foncé);
+    transform: translateY(-2px);
+}
+
+
+.divertissement {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.divertissement h2 {
+    margin-bottom: 3rem;
+    color: var(--violet-doux);
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.divertissement-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.divertissement-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease both;
+}
+
+.divertissement-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.divertissement-card h3 {
+    margin: 15px 10px 5px;
+    color: var(--gris-trés-foncé);
+    font-size: 1.4rem;
+}
+
+.divertissement-card p {
+    margin: 0 10px 15px;
+    color: var(--gris-foncé);
+    font-size: 1rem;
+}
+
+.divertissement-tags span {
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.divertissement-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================== */
+/* PASSIONS */
+/* ===================== */
+.passions {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.passions h2 {
+    margin-bottom: 3rem;
+    color: var(--violet-doux);
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.passions-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.passions-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease both;
+}
+
+.passions-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.passions-card h3 {
+    margin: 15px 10px 5px;
+    color: var(--gris-trés-foncé);
+    font-size: 1.4rem;
+}
+
+.passions-card p {
+    margin: 0 10px 15px;
+    color: var(--gris-foncé);
+    font-size: 1rem;
+}
+
+.passions-tags span {
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.passions-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* --- PAGE CONTACT --- */
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem 10%;
+    gap: 50px;
+    flex-wrap: wrap; /* S'adapte sur mobile */
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h1 {
+    color: var(--violet-doux);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.contact-info h1::after {
+    margin: 1rem 0; /* Aligne la barre à gauche */
+}
+
+.info-details {
+    margin: 2rem 0;
+}
+
+.info-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.social-direct h3 {
+    margin-bottom: 1rem;
+    color: var(--gris-trés-foncé);
+}
+
+.buttons-container {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-app {
+    text-decoration: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp { background-color: #25D366; }
+.telegram { background-color: #0088cc; }
+
+.btn-app:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* Formulaire */
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--gris-trés-foncé);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    background-color: var(--gris-tres-clair);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--violet-doux);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--violet-foncé);
+}
+
+/* Responsivité tablettes/mobiles */
+@media (max-width: 900px) {
+    .contact-section {
+        flex-direction: column;
+        padding: 2rem 5%;
+    }
 }
 

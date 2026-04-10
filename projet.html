@@ -3,42 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>mon portfolio</title>
     <link rel="stylesheet" href="css/style.CSS">
-    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
 </head>
 <body>
-    <header>
+ <header>
         <div>
-            <a href="">Mon Portfolio</a>
+            <a href="">Mon portfolio</a>
         </div>
         <nav>
             <ul>
-                 <li><a href="index.html" >acceuil</a></li>
-                 <li><a href="projet.html"class="active ">projets</a></li>
-                  <li><a href="passion.html">passions</a></li>
-                   <li><a href="Divertissement.html" >Divertissement</a></li>
-                   <li><a href="contact.html">contact</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Projets.html" class="active">Projets</a></li>
+                <li><a href="Passions.html">Passions</a></li>
+                <li><a href="Divertissement.html">Divertissement</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1> mes projets</h1>
-    </main>
-    <footer>
-        <p>&copy;2026 IMMACULEE. tous droits reservés.</p>
-        <div>
-            <a href="#">
-            
-                  
-            </a>
-            <img src="image/logolidink.webp" alt="logo linkedin" width="50">
-            <img src="image/github.png" alt="logo github" width="40">
-            <img src="image/logo_x.webp" alt="logo xtwitter" width="30">
+ <main>
+    <section class="projects">
+        <h2>MES REALISATIONS</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="image/Ecommerce.jpg" alt="Site E-commerce" width="300">
+                <h3>Site E-commerce</h3>
+                <div class="card-content">
+                    <p>Une boutique en ligne complète développée avec HTML, CSS et JavaScript pur.</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <div class="actions">
+                        <button>Code</button>
+                        <button>Démo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/Gestionnaire de tache.jpg" alt="Gestionnaire de Taches" width="300">
+                <h3>Gestionnaire de Taches</h3>
+                <div class="card-content">
+                    <p>Application web pour organiser ses projets quotidiens avec stockage local.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                    </div>
+                    <div class="actions">
+                        <button>Code</button>
+                        <button>Démo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/Personnel du blog.jpg" alt="Blog personnel" width="300">
+                <h3>Blog Personnel</h3>
+                <div class="card-content">
+                    <p>Projet en cours de migration vers Laravel pour apprendre le backend.</p>
+                    <div class="tags">
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                    </div>
+                    <div class="actions">
+                        <button>Code</button>
+                        <button>Bientôt</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/Tableau de bord d'analyse.jpg" alt="Dashboard d'Analyse" width="300">
+                <h3>Dashboard d'Analyse</h3>
+                <div class="card-content">
+                    <p>Visualisation de données dynamiques avec Python et la bibliothèque Matplotlib.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Data</span>
+                    </div>
+                    <div class="actions">
+                        <button>Code</button>
+                        <button>Démo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/Application Météo.jpg" alt="Application Météo" width="300">
+                <h3>Application Météo</h3>
+                <div class="card-content">
+                    <p>Une application utilisant une API en temps réel pour afficher la météo mondiale.</p>
+                    <div class="tags">
+                        <span>JavaScript</span>
+                        <span>API</span>
+                    </div>
+                    <div class="actions">
+                        <button>Code</button>
+                        <button>Démo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/Maquette d'interface utilisateur mobile.jpg" alt="Maquette Mobile UI">
+                <h3>Maquette Mobile UI</h3>
+                <div class="card-content">
+                    <p>Conception d'une interface utilisateur moderne pour une application de fitness.</p>
+                    <div class="tags">
+                        <span>Figma</span>
+                        <span>Design</span>
+                    </div>
+                    <div class="actions">
+                        <button>Design</button>
+                        <button>Aperçu</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+ </main>
+    <footer>
+        <p>&copy; 2026 IMMACULEE. Tous droits réservés.</p>
+        <div>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>   
 </body>
 </html>
